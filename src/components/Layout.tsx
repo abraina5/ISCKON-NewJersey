@@ -235,7 +235,7 @@ export default function Layout() {
       </nav>
 
       {/* Main Content */}
-      <main>
+      <main className="site-content">
         <Outlet />
       </main>
 

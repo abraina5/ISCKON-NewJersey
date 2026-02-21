@@ -84,3 +84,29 @@ img {
     color: rgba(0, 0, 0, 0.5) !important;
   }
 }
+
+.site-content > section,
+.site-content > div > section {
+  border-top: 1px solid rgba(140, 120, 92, 0.35);
+  border-bottom: 1px solid rgba(140, 120, 92, 0.35);
+}
+
+.site-content > section:nth-of-type(4n + 1),
+.site-content > div > section:nth-of-type(4n + 1) {
+  background-color: #f2ece2 !important;
+}
+
+.site-content > section:nth-of-type(4n + 2),
+.site-content > div > section:nth-of-type(4n + 2) {
+  background-color: #e6d8c5 !important;
+}
+
+.site-content > section:nth-of-type(4n + 3),
+.site-content > div > section:nth-of-type(4n + 3) {
+  background-color: #ddd1bf !important;
+}
+
+.site-content > section:nth-of-type(4n + 4),
+.site-content > div > section:nth-of-type(4n + 4) {
+  background-color: #d4c7b4 !important;
+}
