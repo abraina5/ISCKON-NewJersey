@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { Calendar, Clock, MapPin, ChevronRight, Heart, BookOpen, Users } from 'lucide-react';
+import { Calendar, Clock, MapPin, ChevronRight, ChevronLeft, Heart, BookOpen, Users } from 'lucide-react';
 
 const baseUrl = import.meta.env.BASE_URL;
 const heroImages = [
@@ -17,6 +17,8 @@ const events = [
 
 export default function Home() {
   const [heroIndex, setHeroIndex] = useState(0);
+  const showNextHero = () => setHeroIndex((current) => (current + 1) % heroImages.length);
+  const showPrevHero = () => setHeroIndex((current) => (current - 1 + heroImages.length) % heroImages.length);
 
   useEffect(() => {
     const interval = window.setInterval(() => {
@@ -54,6 +56,22 @@ export default function Home() {
           ))}
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/50 to-black/65 z-10" />
+        <button
+          type="button"
+          onClick={showPrevHero}
+          aria-label="Previous image"
+          className="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/35 text-white hover:bg-black/50 transition-all duration-200 ease-out hover:scale-105 flex items-center justify-center"
+        >
+          <ChevronLeft className="w-6 h-6" />
+        </button>
+        <button
+          type="button"
+          onClick={showNextHero}
+          aria-label="Next image"
+          className="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/35 text-white hover:bg-black/50 transition-all duration-200 ease-out hover:scale-105 flex items-center justify-center"
+        >
+          <ChevronRight className="w-6 h-6" />
+        </button>
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 px-4 w-full">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/donate" className="btn-primary">Support the Temple</Link>
