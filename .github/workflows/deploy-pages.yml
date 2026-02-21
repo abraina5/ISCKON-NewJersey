@@ -37,7 +37,7 @@ jobs:
           cache: pnpm
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --frozen-lockfile --store-dir=.pnpm-store --virtual-store-dir=node_modules/.pnpm
 
       - name: Build
         run: pnpm exec vite build
