@@ -4,18 +4,10 @@ const baseUrl = import.meta.env.BASE_URL;
 
 const upcomingEvents = [
   {
-    title: 'Bhagavad Gita 10-Week Course',
-    date: 'Feb 05, 2026',
-    time: '8:00-9:00 PM',
-    description: 'Join us for a comprehensive 10-week journey through the Bhagavad Gita.',
-    start: '2026-02-05T20:00:00-05:00',
-    end: '2026-02-05T21:00:00-05:00',
-  },
-  {
     title: 'Vijaya Ekadasi',
     date: 'Feb 12, 2026',
     time: 'All Day',
-    description: 'Auspicious fasting day with extended kirtan and spiritual programs.',
+    description: 'Most recent major observance, celebrated with fasting, kirtan, and special prayers.',
     allDay: true,
     startDate: '2026-02-12',
   },
@@ -28,12 +20,20 @@ const upcomingEvents = [
     startDate: '2026-02-27',
   },
   {
-    title: 'Nityananda Trayodasi Festival',
-    date: 'Jan 30, 2026',
-    time: '6:00 PM',
-    description: 'Grand celebration of the appearance day of Lord Nityananda with abhisheka, kirtan, and feast.',
-    start: '2026-01-30T18:00:00-05:00',
-    end: '2026-01-30T20:00:00-05:00',
+    title: 'Gaura Purnima',
+    date: 'Mar 03, 2026',
+    time: '5:30 PM - 9:00 PM',
+    description: 'Festival celebration of Sri Chaitanya Mahaprabhu with kirtan, abhisheka, and prasadam.',
+    start: '2026-03-03T17:30:00-05:00',
+    end: '2026-03-03T21:00:00-05:00',
+  },
+  {
+    title: 'Papamocani Ekadasi',
+    date: 'Mar 14, 2026',
+    time: 'All Day',
+    description: 'Sacred Ekadashi dedicated to purification through prayer, fasting, and remembrance.',
+    allDay: true,
+    startDate: '2026-03-14',
   },
 ];
 

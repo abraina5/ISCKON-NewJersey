@@ -16,7 +16,7 @@ export default function About() {
         <div className="absolute inset-0 bg-gradient-to-b from-dark/10 via-dark/20 to-dark/30 z-10" />
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${baseUrl}images/Guranitai.jpg)` }}
+          style={{ backgroundImage: `url(${baseUrl}images/iskcon-temple-gaura-nitai-deity-altar.jpg)` }}
         />
         <div className="relative z-20">
           <p className="text-gold uppercase tracking-widest text-sm mb-2">Our Story</p>
@@ -32,7 +32,7 @@ export default function About() {
         <div className="max-w-6xl mx-auto">
           <div className="relative overflow-hidden rounded-2xl border border-gold/30 shadow-lg">
             <img
-              src={`${baseUrl}images/Guranitai.jpg`}
+              src={`${baseUrl}images/iskcon-temple-gaura-nitai-deity-altar.jpg`}
               alt="Gaura Nitai Deities"
               className="w-full h-[380px] md:h-[520px] object-cover object-center"
               loading="eager"
@@ -212,20 +212,14 @@ export default function About() {
               </div>
             </div>
 
-            <div className="bg-charcoal rounded-lg overflow-hidden border border-gold/20 h-[500px] flex items-center justify-center">
-              <div className="text-center p-8">
-                <MapPin className="w-16 h-16 text-gold mx-auto mb-4" />
-                <h3 className="font-heading text-xl text-white mb-2">Visit Us</h3>
-                <p className="text-white/60 mb-4">100 Jacksonville Road, Towaco, NJ 07082</p>
-                <a 
-                  href="https://maps.google.com/?q=100+Jacksonville+Road+Towaco+NJ"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn-secondary inline-block"
-                >
-                  Open in Google Maps
-                </a>
-              </div>
+            <div className="bg-charcoal rounded-lg overflow-hidden border border-gold/20 h-[500px]">
+              <iframe
+                title="ISKCON of New Jersey Map"
+                src="https://www.google.com/maps?q=100+Jacksonville+Road+Towaco+NJ+07082&output=embed"
+                className="w-full h-full border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </div>
         </div>

@@ -4,15 +4,16 @@ import { Calendar, Clock, MapPin, ChevronRight, ChevronLeft, Heart, BookOpen, Us
 
 const baseUrl = import.meta.env.BASE_URL;
 const heroImages = [
-  `${baseUrl}images/Guranitai.jpg`,
-  `${baseUrl}images/hero-background.avif`,
   `${baseUrl}images/iskcon-temple-gaura-nitai-deity-altar.jpg`,
+  `${baseUrl}images/hero-background.avif`,
+  `${baseUrl}images/temple-interior.avif`,
   `${baseUrl}images/ornate-hindu-temple-interior-golden-pillar.jpg`,
 ];
 const events = [
-  { title: 'Ekadashi Observance', date: 'Every 11th day', description: 'Special fasting day with extended kirtan and spiritual programs.' },
-  { title: 'Bhagavad Gita Course', date: 'Saturdays 6PM', description: 'Study the timeless wisdom of the Gita in a structured course format.' },
-  { title: 'Sunday Feast Program', date: 'Sundays 5PM', description: 'Kirtan, lecture, and free vegetarian feast for all visitors.' },
+  { title: 'Vijaya Ekadasi', date: 'Feb 12, 2026', description: 'Recently observed with fasting, kirtan, and temple-wide devotional programs.' },
+  { title: 'Amalaki Vrata Ekadashi', date: 'Feb 27, 2026', description: 'Auspicious Ekadashi observance with special darshan and devotional focus.' },
+  { title: 'Gaura Purnima', date: 'Mar 03, 2026', description: 'Grand appearance day celebration of Sri Chaitanya Mahaprabhu with kirtan and feast.' },
+  { title: 'Papamocani Ekadasi', date: 'Mar 14, 2026', description: 'Sacred Ekadashi dedicated to purification through prayer, fasting, and remembrance.' },
 ];
 
 export default function Home() {
@@ -136,7 +137,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
           <div className="relative aspect-video rounded-lg overflow-hidden">
             <img 
-              src={`${baseUrl}images/legacy/operations-board-untitled.jpg`} 
+              src={`${baseUrl}images/temple-interior.avif`} 
               alt="Temple Interior" 
               className="w-full h-full object-cover"
             />
@@ -168,7 +169,7 @@ export default function Home() {
             <p className="text-gold uppercase tracking-widest text-sm mb-2">What We Offer</p>
             <h2 className="font-heading text-4xl text-white">Temple Services</h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Link to="/services" className="card text-center bg-[#f7efe3]/90 border-black/10 block">
               <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gold/10 flex items-center justify-center">
                 <Heart className="w-8 h-8 text-gold" />

@@ -44,7 +44,7 @@ export default function ChildProtection() {
             <ul className="space-y-4">
               {policyRules.map((rule, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-gold shrink-0 mt-0.5" />
+                  <Check className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
                   <span className="text-white/80">{rule}</span>
                 </li>
               ))}
