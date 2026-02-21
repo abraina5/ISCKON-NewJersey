@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import { Menu, X, Clock, MapPin, Mail, Phone, Facebook, Instagram, Twitter, ChevronDown, ExternalLink } from 'lucide-react';
 import DarshanModal from './DarshanModal';
@@ -64,6 +64,10 @@ export default function Layout() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const location = useLocation();
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [location.pathname]);
+
   return (
     <div className="min-h-screen bg-transparent">
       {/* Top Banner - New Temple Promo */}
@@ -110,7 +114,7 @@ export default function Layout() {
                 >
                   <Link
                     to={item.path}
-                    className={`uppercase text-xs tracking-widest transition-colors flex items-center gap-1 py-2 ${
+                    className={`uppercase text-xs tracking-widest transition-all duration-200 ease-out hover:-translate-y-0.5 flex items-center gap-1 py-2 ${
                       location.pathname === item.path ? 'text-gold' : 'text-white/80 hover:text-gold'
                     }`}
                   >
@@ -128,7 +132,7 @@ export default function Layout() {
                             href={sub.path}
                             target="_blank"
                             rel="noreferrer"
-                            className="block px-4 py-2 text-sm text-white/70 hover:text-gold hover:bg-gold/5 transition-colors flex items-center justify-between"
+                            className="block px-4 py-2 text-sm text-white/70 hover:text-gold hover:bg-gold/5 transition-all duration-200 ease-out hover:pl-5 flex items-center justify-between"
                           >
                             {sub.name}
                             <ExternalLink className="w-3 h-3" />
@@ -137,7 +141,7 @@ export default function Layout() {
                           <Link
                             key={sub.path}
                             to={sub.path}
-                            className="block px-4 py-2 text-sm text-white/70 hover:text-gold hover:bg-gold/5 transition-colors"
+                            className="block px-4 py-2 text-sm text-white/70 hover:text-gold hover:bg-gold/5 transition-all duration-200 ease-out hover:pl-5"
                           >
                             {sub.name}
                           </Link>
