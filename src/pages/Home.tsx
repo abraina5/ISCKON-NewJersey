@@ -25,6 +25,13 @@ export default function Home() {
     return () => window.clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    heroImages.forEach((src) => {
+      const image = new Image();
+      image.src = src;
+    });
+  }, []);
+
   return (
     <div className="bg-[#e9e1d4]">
       {/* Hero Section */}
@@ -36,10 +43,13 @@ export default function Home() {
         />
         <div className="absolute inset-0 z-0">
           {heroImages.map((image, index) => (
-            <div
+            <img
               key={image}
-              className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${index === heroIndex ? 'opacity-100' : 'opacity-0'}`}
-              style={{ backgroundImage: `url(${image})` }}
+              src={image}
+              alt="Temple view"
+              loading={index === 0 ? 'eager' : 'lazy'}
+              fetchPriority={index === 0 ? 'high' : 'auto'}
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${index === heroIndex ? 'opacity-100' : 'opacity-0'}`}
             />
           ))}
         </div>

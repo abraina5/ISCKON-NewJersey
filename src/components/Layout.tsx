@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import { Menu, X, Clock, MapPin, Mail, Phone, Facebook, Instagram, Twitter, ChevronDown, ExternalLink } from 'lucide-react';
 import DarshanModal from './DarshanModal';
@@ -62,10 +62,22 @@ export default function Layout() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [darshanOpen, setDarshanOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [pageLoading, setPageLoading] = useState(false);
   const location = useLocation();
+  const previousPathRef = useRef(location.pathname);
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (previousPathRef.current === location.pathname) return;
+
+    setPageLoading(true);
+    window.scrollTo({ top: 0, behavior: 'auto' });
+    previousPathRef.current = location.pathname;
+
+    const timeoutId = window.setTimeout(() => {
+      setPageLoading(false);
+    }, 500);
+
+    return () => window.clearTimeout(timeoutId);
   }, [location.pathname]);
 
   useEffect(() => {
@@ -96,6 +108,16 @@ export default function Layout() {
 
   return (
     <div className="min-h-screen bg-transparent">
+      {pageLoading && (
+        <div className="fixed inset-0 z-[120] bg-[#e9e1d4] flex items-center justify-center">
+          <img
+            src={`${baseUrl}images/iskcon-logo.avif`}
+            alt="ISKCON logo"
+            className="w-20 h-20 sm:w-24 sm:h-24 page-loader-logo"
+          />
+        </div>
+      )}
+
       {/* Top Banner - New Temple Promo */}
       <div className="bg-gold/10 border-b border-gold/30 py-2 px-4 text-center">
         <a 
