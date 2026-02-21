@@ -51,7 +51,7 @@ img {
     @apply border border-gold/60 text-gold px-6 py-3 uppercase text-xs font-semibold tracking-[0.2em] rounded-full transition-all duration-300 hover:bg-gold hover:text-black hover:-translate-y-0.5;
   }
   .card {
-    @apply bg-elevated/70 rounded-2xl border border-white/10 p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_45px_rgba(0,0,0,0.35)];
+    @apply bg-elevated/70 rounded-2xl border border-white/10 p-8 transition-all duration-500 ease-out hover:-translate-y-2 hover:scale-[1.01] hover:shadow-[0_28px_50px_rgba(0,0,0,0.38)];
   }
   .gold-divider {
     @apply h-px bg-gradient-to-r from-transparent via-gold to-transparent opacity-40;
@@ -113,13 +113,19 @@ img {
 
 .site-content .reveal-section {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 500ms ease, transform 500ms ease;
+  transform: translateY(34px) scale(0.985);
+  filter: blur(2px);
+  transition:
+    opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 800ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 700ms ease;
+  transition-delay: var(--reveal-delay, 0ms);
 }
 
 .site-content .reveal-section.is-visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
+  filter: blur(0);
 }
 
 @media (prefers-reduced-motion: reduce) {

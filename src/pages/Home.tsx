@@ -141,27 +141,27 @@ export default function Home() {
             <h2 className="font-heading text-4xl text-white">Temple Services</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="card text-center bg-[#f7efe3]/90 border-black/10">
+            <Link to="/services" className="card text-center bg-[#f7efe3]/90 border-black/10 block">
               <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gold/10 flex items-center justify-center">
                 <Heart className="w-8 h-8 text-gold" />
               </div>
               <h3 className="font-heading text-xl text-white mb-3">Samskaras & Pujas</h3>
               <p className="text-white/60 text-sm">Sacred ceremonies for life's important milestones.</p>
-            </div>
-            <div className="card text-center bg-[#f7efe3]/90 border-black/10">
+            </Link>
+            <Link to="/education" className="card text-center bg-[#f7efe3]/90 border-black/10 block">
               <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gold/10 flex items-center justify-center">
                 <BookOpen className="w-8 h-8 text-gold" />
               </div>
               <h3 className="font-heading text-xl text-white mb-3">Sunday School</h3>
               <p className="text-white/60 text-sm">Spiritual education for children ages 3 through 12th grade.</p>
-            </div>
-            <div className="card text-center bg-[#f7efe3]/90 border-black/10">
+            </Link>
+            <Link to="/services#catering" className="card text-center bg-[#f7efe3]/90 border-black/10 block">
               <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gold/10 flex items-center justify-center">
                 <Users className="w-8 h-8 text-gold" />
               </div>
               <h3 className="font-heading text-xl text-white mb-3">Govinda's Catering</h3>
               <p className="text-white/60 text-sm">Delicious vegetarian cuisine for your special events.</p>
-            </div>
+            </Link>
           </div>
           <div className="text-center mt-12">
             <Link to="/services" className="inline-flex items-center text-gold hover:text-gold-light transition-colors">

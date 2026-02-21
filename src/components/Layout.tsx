@@ -84,9 +84,10 @@ export default function Layout() {
       { threshold: 0.12, rootMargin: '0px 0px -8% 0px' }
     );
 
-    sections.forEach((section) => {
+    sections.forEach((section, index) => {
       section.classList.add('reveal-section');
       section.classList.remove('is-visible');
+      section.style.setProperty('--reveal-delay', `${Math.min(index * 70, 280)}ms`);
       observer.observe(section);
     });
 
