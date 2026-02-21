@@ -26,7 +26,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
+    <div className="bg-[#e9e1d4]">
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center">
         <div className="absolute inset-0 z-0">
@@ -38,7 +38,7 @@ export default function Home() {
             />
           ))}
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-dark/30 via-dark/60 to-dark z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/50 to-black/65 z-10" />
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 px-4 w-full">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/donate" className="btn-primary">Support the Temple</Link>
@@ -48,7 +48,7 @@ export default function Home() {
       </section>
 
       {/* Info Strip */}
-      <section className="bg-charcoal py-8 border-y border-gold/20">
+      <section className="bg-[#d4c7b4] py-8 border-y border-[#b9a98d] shadow-[inset_0_1px_0_rgba(255,255,255,0.35)]">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="flex items-center gap-4 justify-center md:justify-start">
             <Clock className="w-8 h-8 text-gold" />
@@ -75,7 +75,7 @@ export default function Home() {
       </section>
 
       {/* Upcoming Events */}
-      <section className="py-24 px-4">
+      <section className="py-24 px-4 bg-[#f2ece2] border-y border-[#cbbca4]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <p className="text-gold uppercase tracking-widest text-sm mb-2">Join Us</p>
@@ -83,7 +83,7 @@ export default function Home() {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {events.map((event, i) => (
-              <div key={i} className="card">
+              <div key={i} className="card bg-[#fff9f0]/90 border-black/10">
                 <p className="text-gold text-sm uppercase tracking-wider mb-2">{event.date}</p>
                 <h3 className="font-heading text-2xl text-white mb-4">{event.title}</h3>
                 <p className="text-white/60">{event.description}</p>
@@ -99,7 +99,7 @@ export default function Home() {
       </section>
 
       {/* New Temple Project */}
-      <section className="py-24 bg-charcoal">
+      <section className="py-24 bg-[#ddd1bf] border-y border-[#bea98a]">
         <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
           <div className="relative aspect-video rounded-lg overflow-hidden">
             <img 
@@ -129,28 +129,28 @@ export default function Home() {
       </section>
 
       {/* Services Preview */}
-      <section className="py-24 px-4">
+      <section className="py-24 px-4 bg-[#e6d8c5] border-y border-[#c2ae90]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <p className="text-gold uppercase tracking-widest text-sm mb-2">What We Offer</p>
             <h2 className="font-heading text-4xl text-white">Temple Services</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="card text-center">
+            <div className="card text-center bg-[#f7efe3]/90 border-black/10">
               <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gold/10 flex items-center justify-center">
                 <Heart className="w-8 h-8 text-gold" />
               </div>
               <h3 className="font-heading text-xl text-white mb-3">Samskaras & Pujas</h3>
               <p className="text-white/60 text-sm">Sacred ceremonies for life's important milestones.</p>
             </div>
-            <div className="card text-center">
+            <div className="card text-center bg-[#f7efe3]/90 border-black/10">
               <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gold/10 flex items-center justify-center">
                 <BookOpen className="w-8 h-8 text-gold" />
               </div>
               <h3 className="font-heading text-xl text-white mb-3">Sunday School</h3>
               <p className="text-white/60 text-sm">Spiritual education for children ages 3 through 12th grade.</p>
             </div>
-            <div className="card text-center">
+            <div className="card text-center bg-[#f7efe3]/90 border-black/10">
               <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gold/10 flex items-center justify-center">
                 <Users className="w-8 h-8 text-gold" />
               </div>
@@ -167,7 +167,7 @@ export default function Home() {
       </section>
 
       {/* Newsletter */}
-      <section className="py-16 border-t border-gold/20">
+      <section className="py-16 bg-[#ccb99b] border-t border-[#ad9778]">
         <div className="max-w-xl mx-auto px-4 text-center">
           <h3 className="font-heading text-2xl text-white mb-4">Stay Connected</h3>
           <p className="text-white/60 mb-6">Subscribe to receive updates about events, festivals, and temple news.</p>
@@ -175,7 +175,7 @@ export default function Home() {
             <input 
               type="email" 
               placeholder="Enter your email" 
-              className="flex-1 px-4 py-3 bg-charcoal border border-gold/20 rounded text-white placeholder:text-white/40 focus:border-gold focus:outline-none"
+              className="flex-1 px-4 py-3 bg-[#f5ecdf] border border-[#bca78a] rounded text-black placeholder:text-black/50 focus:border-gold focus:outline-none"
             />
             <button type="submit" className="btn-primary">Subscribe</button>
           </form>
