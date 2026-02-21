@@ -136,18 +136,20 @@ img {
   }
 }
 
-@keyframes logoBulge {
+@keyframes simpleSpin {
   0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.08);
+    transform: rotate(0deg);
   }
   100% {
-    transform: scale(1);
+    transform: rotate(360deg);
   }
 }
 
-.page-loader-logo {
-  animation: logoBulge 1.2s ease-in-out infinite;
+.simple-loader {
+  width: 36px;
+  height: 36px;
+  border: 3px solid rgba(0, 0, 0, 0.2);
+  border-top-color: rgba(0, 0, 0, 0.75);
+  border-radius: 9999px;
+  animation: simpleSpin 0.8s linear infinite;
 }

@@ -110,11 +110,7 @@ export default function Layout() {
     <div className="min-h-screen bg-transparent">
       {pageLoading && (
         <div className="fixed inset-0 z-[120] bg-[#e9e1d4] flex items-center justify-center">
-          <img
-            src={`${baseUrl}images/iskcon-logo.avif`}
-            alt="ISKCON logo"
-            className="w-20 h-20 sm:w-24 sm:h-24 page-loader-logo"
-          />
+          <div className="simple-loader" aria-label="Loading" />
         </div>
       )}
 
