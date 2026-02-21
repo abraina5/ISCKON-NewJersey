@@ -60,7 +60,7 @@ export default function Home() {
           type="button"
           onClick={showPrevHero}
           aria-label="Previous image"
-          className="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/35 text-white hover:bg-black/50 transition-all duration-200 ease-out hover:scale-105 flex items-center justify-center"
+          className="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/85 text-black hover:bg-white transition-all duration-200 ease-out hover:scale-105 flex items-center justify-center"
         >
           <ChevronLeft className="w-6 h-6" />
         </button>
@@ -68,7 +68,7 @@ export default function Home() {
           type="button"
           onClick={showNextHero}
           aria-label="Next image"
-          className="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/35 text-white hover:bg-black/50 transition-all duration-200 ease-out hover:scale-105 flex items-center justify-center"
+          className="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/85 text-black hover:bg-white transition-all duration-200 ease-out hover:scale-105 flex items-center justify-center"
         >
           <ChevronRight className="w-6 h-6" />
         </button>
