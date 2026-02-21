@@ -5,7 +5,7 @@ export default {
     extend: {
       colors: {
         gold: {
-          light: '#FCECEC',
+          light: '#DFA5A5',
           DEFAULT: '#E24A4A',
           dark: '#C23B3B',
           darker: '#9E2E2E',
