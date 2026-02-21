@@ -29,6 +29,11 @@ export default function Home() {
     <div className="bg-[#e9e1d4]">
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center">
+        <Link
+          to="/about"
+          aria-label="Learn about ISKCON New Jersey"
+          className="absolute inset-0 z-10 cursor-pointer"
+        />
         <div className="absolute inset-0 z-0">
           {heroImages.map((image, index) => (
             <div

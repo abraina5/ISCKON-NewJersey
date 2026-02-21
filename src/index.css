@@ -110,3 +110,22 @@ img {
 .site-content > div > section:nth-of-type(4n + 4) {
   background-color: #d4c7b4 !important;
 }
+
+.site-content .reveal-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 500ms ease, transform 500ms ease;
+}
+
+.site-content .reveal-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-content .reveal-section {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
