@@ -123,7 +123,7 @@ export default function Layout() {
           className="text-sm text-white/80 hover:text-gold transition-colors inline-flex items-center gap-2"
         >
           <span className="text-gold font-medium">New Temple in Parsippany!</span>
-          <span className="hidden sm:inline">- It will offer you and your family fresh air of spirituality</span>
+          <span className="hidden sm:inline">- It will offer you and your family a fresh spiritual atmosphere</span>
           <ExternalLink className="w-3 h-3" />
         </a>
       </div>
@@ -291,7 +291,7 @@ export default function Layout() {
       <section className="py-12 px-4 bg-gradient-to-r from-gold/20 to-gold/5 border-y border-gold/30">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="font-heading text-2xl text-white mb-3">New Temple in Parsippany</h3>
-          <p className="text-white/70 mb-6">It will offer you and your family fresh air of spirituality</p>
+          <p className="text-white/70 mb-6">It will offer you and your family a fresh spiritual atmosphere</p>
           <a 
             href="http://www.iskconparsippany.org" 
             target="_blank" 

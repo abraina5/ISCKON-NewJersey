@@ -7,6 +7,7 @@ const classes = [
   { name: 'Kishore', ages: 'Grades 1-3', description: 'Building foundational knowledge of Vedic culture and values' },
   { name: 'Madhava', ages: 'Grades 4-6', description: 'Deeper study of scriptures and spiritual practices' },
   { name: 'Govinda', ages: 'Grades 7-9', description: 'Advanced topics and youth engagement programs' },
+  { name: 'Leadership Sanga', ages: 'Grades 10-12', description: 'Focused discussions on applying spiritual principles and dharmic values in everyday life, leadership, and decision-making' },
 ];
 
 const fees = [
@@ -43,7 +44,7 @@ export default function Education() {
               <p className="text-gold uppercase tracking-widest text-sm mb-2">For Children</p>
               <h2 className="font-heading text-4xl text-white mb-6">Sunday School</h2>
               <p className="text-white/70 mb-6 leading-relaxed">
-                Our Sunday School program provides spiritual education for children from ages 3 through 9th grade. 
+                Our Sunday School program provides spiritual education for children from ages 3 through 12th grade. 
                 Students learn about Krishna, the Bhagavad Gita, Vedic culture, Sanskrit, and moral values through 
                 engaging activities, stories, and interactive lessons.
               </p>
